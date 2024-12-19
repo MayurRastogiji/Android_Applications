@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="name">Name</string>
+    <string name="hint_name1">Enter name of first player</string>
+    <string name="hint_name2">Enter name of second player</string>
+    <string name="symbol">Symbol</string>
+    <string name="hint_symbol">Enter your Symbol(X or O)</string>
+    <string name="hint_symbolX">Your symbol is X</string>
+    <string name="hint_symbolO">Your Symbol is O</string>
+    <string name="Submit">Submit</string>
+</resources>

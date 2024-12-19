@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="DuplicateDefinition">
+    <string name="app_name">first_project</string>
+    <string name="about">This is about page</string>
+<!--    <string name="about_us">This is my first project in which I learn about layouts, views like imageview, textview, edittext etc. </string>-->
+    <string name="about_us">BMI Calculator </string>
+    <string name="ages">ages: 2 - 120</string>
+    <string name="height">Enter value in cm</string>
+    <string name="weight">Enter value in kg</string>
+    <string name="aget">age</string>
+    <string name="heightt">Height</string>
+    <string name="weightt">Weight</string>
+    <string name="btn_calculate">Calculate</string>
+    <string name="resultt">result</string>
+
+</resources>
