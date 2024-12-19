@@ -8,4 +8,5 @@
     <string name="hint_symbolX">Your symbol is X</string>
     <string name="hint_symbolO">Your Symbol is O</string>
     <string name="Submit">Submit</string>
+    <string name="restart">Restart</string>
 </resources>
