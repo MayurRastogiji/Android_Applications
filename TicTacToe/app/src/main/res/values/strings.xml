@@ -9,4 +9,5 @@
     <string name="hint_symbolO">Your Symbol is O</string>
     <string name="Submit">Submit</string>
     <string name="restart">Restart</string>
+    <string name="welcome">Welcome</string>
 </resources>

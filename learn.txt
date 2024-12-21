@@ -1,0 +1,92 @@
+**Intent Passing**
+
+
+it is the procedure via which we can change screen in our android application using any event listner or on the basis of any particular logic.
+.) Intent abc = new Intent(`fromclass`.this,`toclass`.class);
+the above line is used to create an intent.
+.) startActivity(`intent_name`);
+the above code is responsible for changing screen
+
+
+**Bundle Passing**
+
+
+it is the procedure via which we can send and receive content from 1 java file to another via intent
+.) `intent name`.putExtra(`key`,variable);
+the above command is used to send variables from a using in this key is string and variable can be in any form string,int,array etc. key is used to fetch data in another file
+.) Intent abc = getIntent();
+above command is used to build an Intent in another file to receive data.
+.) `data type` `variable name` = `Intent name`.getStringExtra(`key`);
+key = key that you mentioned while sending data
+data type = type of data that is being send using the above key
+getStringExtra = is used to fetch string data, if any another data is to receive you need to used different method.
+
+
+**Splash Screen**
+
+
+it is the screen that is shown every time while opening an app for some amount of time till its files is being loaded.
+.) create an activity.
+.) from AndroidManifest.xml cut intent-filter from .MainActivity and paste it in new activity that is being created form splash screen
+.) make an intent in splash file that link with your main activity(activity that is needed to be shown at first.)
+.) if we simply run startActivity(`Intent name`); then our splash screen will never been shown because this procedure is very fast we can't see it'
+.) new Handler().postDelayed(new Runnable(){
+	@Override
+	public void run(){
+		startActivity(`Intent name`);
+		finish();
+	}
+   }, 3000);
+the above is used to create ansynchronous thread which will directy run after 3 sec because we pass 3000 millisecond,
+to use thread we need a Runnable class that's why we created a new Runnable and by overriding its run method we run our intent
+finish() = is used to pop it from maintained stack of Intents
+	if we do not write finish() then when we press back button we will come back to 	our Splash screen, which any developer does not want to happen.
+
+
+**Animation**
+
+
+.) Right click on res directory>new>new resource directory  Enter Resource type as "anim" or Directory name as "anim" then ok
+it will create an anim directory in which we can create our animations.
+
+.) right click on anim directory>new>Animation resource file name as per your choice then ok
+it will create your file where you can create your animation.
+
+.) Animation abc = AnimationUtils.LoadAnimation(this,R.anim.`file name`);
+it will create object of the animation that you created.
+
+.)`reference on which you want to apply animation`.startAnimation(`pass object name`);
+startAnimation = it will directly start animation.
+setAnimation = it will set your animation and start it when object is loaded.
+
+.) Scale Animation
+used to make a smaller or larger view either on X-axis or Y-axis.
+
+.) Rotate Animation
+used to rotate a view around a pivot point a certain number of degrees.
+
+.) Translate Animation
+used to move a view along the X or Y axis.
+
+.) Alpha Animation
+Transparency of a view can be changed.
+
+//Attributes\\
+
+.) android:duration = "1000"
+The duration in which animation is completed.
+
+.) android:fillAfter = "true"
+defines whether the view should be visible or not at the end of animation.
+
+.) android:interpolator = "@android:anim/linear_interpolator"
+refers to the rate of change in animation
+
+.) android:startOffset = "2000"
+refers to the waiting time before an animation start
+
+.) android:repeatMode = "restart"
+Mode of repetition Two types of Modes Restart(default) and Reverse
+
+.)android:repeatCount = "infinite"
+defines the number of repetition on animation, we can either give number of iteration or infinite.
