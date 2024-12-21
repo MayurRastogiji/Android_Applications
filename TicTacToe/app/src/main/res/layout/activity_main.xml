@@ -18,6 +18,8 @@
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
         />
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,12 +29,12 @@
     />
 
     <EditText
+        android:id="@+id/name1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:hint="@string/hint_name1"
-        android:id="@+id/name1"
-        android:inputType="textPersonName"/>
+        android:inputType="textPersonName" />
 
     <TextView
         android:layout_width="match_parent"
@@ -73,87 +75,8 @@
         android:text="@string/Submit"
         android:id="@+id/submit"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/player1"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/player2"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/turn"
-        android:textSize="18sp"
-        android:layout_gravity="center_horizontal"
-        android:textStyle="bold"/>
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:columnCount="3"
-        android:layout_gravity="center"
-        >
-
-        <Button
-            android:id="@+id/cell11"
-            android:layout_margin="5dp"
-            android:onClick="check"/>
-        <Button
-            android:id="@+id/cell12"
-            android:layout_margin="5dp"
-            android:onClick="check"/>
-        <Button
-            android:id="@+id/cell13"
-            android:onClick="check"
-            android:layout_margin="5dp"/>
-        <Button
-            android:id="@+id/cell21"
-            android:onClick="check"
-            android:layout_margin="5dp"/>
-        <Button
-            android:id="@+id/cell22"
-            android:onClick="check"
-            android:layout_margin="5dp"/>
-        <Button
-            android:id="@+id/cell23"
-            android:onClick="check"
-            android:layout_margin="5dp"/>
-        <Button
-            android:id="@+id/cell31"
-            android:layout_margin="5dp"
-            android:onClick="check"/>
-        <Button
-            android:id="@+id/cell32"
-            android:onClick="check"
-            android:layout_margin="5dp"/>
-        <Button
-            android:id="@+id/cell33"
-            android:onClick="check"
-            android:layout_margin="5dp"/>
-
-    </GridLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/result"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/restart"
-        android:id="@+id/restart"
-        android:onClick="restart"/>
 
 
 </LinearLayout>
