@@ -1,4 +1,4 @@
-package com.example.animationtypes;
+package com.example.trying;
 
 import android.os.Bundle;
 import android.view.View;
@@ -11,12 +11,13 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.example.trying.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
 
     TextView text;
     int i = 1;
-        Animation moveAlpha,moveTranslate, moveRotate, moveScale;
+    Animation moveAlpha,moveTranslate, moveRotate, moveScale;
     Button btntranslate, btnalpha, btnrotate, btnscale, btnlottie;
 //    LottieAnimationView lottie;
 

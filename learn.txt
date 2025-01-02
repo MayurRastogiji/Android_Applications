@@ -52,7 +52,7 @@ it will create an anim directory in which we can create our animations.
 .) right click on anim directory>new>Animation resource file name as per your choice then ok
 it will create your file where you can create your animation.
 
-.) Animation abc = AnimationUtils.LoadAnimation(this,R.anim.`file name`);
+.) Animation abc = AnimationUtils.loadAnimation(this,R.anim.`file name`);
 it will create object of the animation that you created.
 
 .)`reference on which you want to apply animation`.startAnimation(`pass object name`);
@@ -90,3 +90,64 @@ Mode of repetition Two types of Modes Restart(default) and Reverse
 
 .)android:repeatCount = "infinite"
 defines the number of repetition on animation, we can either give number of iteration or infinite.
+
+
+//Lottie Animation\\
+
+
+.) create your id at lottie animation
+.) select an animation and change it as your like, install its json file
+.) put that json file into R.raw directory
+.) from lottie animation GitHub repo copy its dependencies and pste it into build.gradle file
+.) now in xml file type lottie via options select whole path to it
+.) set its properties
+.) set your animation path via using rawRes.
+
+
+** List **
+
+
+// ListView \\
+
+.) It is used to show whole list as you made 
+
+// SpinnerView \\
+
+.) It is used to show a dropdown list
+
+// AutoCompleteTextView \\
+
+.) It is used to show a list of recommended item basis of characters you are filling in EditText View.
+
+
+.) All the above list view have different use case.
+.) make these views in xml file, give them id.
+.) Fetch there id in java file
+.) Create an araay list, add items in it.
+.) using arrayadapter set value in the list view
+
+	.) ArrayAdapter<`data type`> `name of adapter` = new ArrayAdapter<>(this, 	   	   android.R.Layout.simple_list_item_1, `id of ArrayList`);
+	.) `id of view`.setAdapter(`name of Adapter`);
+
+	this = location from where function is calling
+		In place of this we can use(MainActivity.this, getApplicationContext())
+
+	android.R.Layout = is the location from where we can get default view made by 	android itself
+
+	3rd attribute = arraylist which you want to be shown on the screen.
+
+
+** CardView **
+
+
+.) use to make card like structure (just like preview cards).
+
+Attributes
+
+.) cardBackgroundColor = defines the background color of card.
+.) cardElevation = defines the elevation of the card
+.) cardCornerRadius = curveness of the corner of the card
+.) carduseCompatPadding = if its value is true it will take default padding which is needed in order to show shadows.
+
+.) pallete > container > CardView 
+it is not installed by default to install it go to above location and install it .

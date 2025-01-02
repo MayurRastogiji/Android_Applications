@@ -3,20 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_gravity="center"
-    tools:context=".splashActivity">
-
-<!--    <TextView-->
-<!--    android:layout_width="wrap_content"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:text="@string/welcome"-->
-<!--    android:textStyle="bold"-->
-<!--    android:textSize="20dp"-->
-<!--    android:layout_margin="10dp"-->
-<!--    android:id="@+id/wel"/>-->
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity">
 
     <com.airbnb.lottie.LottieAnimationView
         android:layout_width="wrap_content"
@@ -24,7 +14,5 @@
         app:lottie_rawRes="@raw/hand_loading"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"/>
-
-
 
 </LinearLayout>

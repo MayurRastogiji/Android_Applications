@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.animationtypes"
+    namespace = "com.example.trying"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.animationtypes"
+        applicationId = "com.example.trying"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-    implementation("com.airbnb.android:lottie:6.6.2")
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -40,4 +40,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+}
+dependencies {
+    implementation("com.airbnb.android:lottie:6.6.2")
 }
