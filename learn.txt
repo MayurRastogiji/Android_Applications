@@ -151,3 +151,6 @@ Attributes
 
 .) pallete > container > CardView 
 it is not installed by default to install it go to above location and install it .
+
+
+** RecyclerView **
