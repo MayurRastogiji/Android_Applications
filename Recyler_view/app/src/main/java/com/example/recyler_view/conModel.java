@@ -9,4 +9,8 @@ public class conModel {
     this.conName = conName;
     this.conNumber = conNumber;
     }
+    public conModel(String conName, String conNumber){
+        this.conName = conName;
+        this.conNumber = conNumber;
+    }
 }
