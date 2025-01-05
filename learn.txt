@@ -154,3 +154,39 @@ it is not installed by default to install it go to above location and install it
 
 
 ** RecyclerView **
+
+
+.) Create a RecyclerView in activity_main.xml
+.) Create variable in MainActivity of your view and find it view via id
+.) recContact.setLayoutManager(new LinearLayoutManager(this));
+	recontact = variable 
+	setLayoutManager = there are three types of layouts(Linear, Grid, StaggeredGrid)
+.) make a new xml file which includes layout that needed to be use in RecyclerView
+.) make a java file which includes all the type of variable used in your layout, build constructor to assign value to this variables.
+.) ArrayList<conModel> arrContact = new ArrayList<>();
+	make arraylist of the type of java file created before
+.) arrContact.add(new conModel(R.drawable.img, "Mayur Rastogi", "1234567890"));
+	add elements to the above arraylist by calling constructor build earlier.
+.) create a new java file which will work as adapter to our recycler view
+.) extend it with RecyclerView.Adapter<`filename`.ViewHolder>
+.) then by pressing alt+enter
+	it will create class ViewHolder, extends it with RecyclerView.ViewHolder
+	create its constructor that assign view to its super view
+	it will also create 3 methods named(onCreateViewholder,onBindViewHolder, getItemCount)
+.) View v = LayoutInflater.from(context).inflate(R.layout.contact_row, parent, false);
+ViewHolder holder = new ViewHolder(v);
+return holder;
+	write the above line of code inside onCreateViewHoder
+.) holder.conName.setText(arrContact.get(position).conName);
+holder.conNumber.setText(arrContact.get(position).conNumber);
+holder.conImg.setImageResource(arrContact.get(position).conImg);
+	write the above line of code inside onBindViewHolder, these lines are used to 	assign value to the recycler view at run time.
+.) return arrContact.size();
+	write the above line of code inside the getItemCount
+	it will give the size of arraylist, also number of times recycler View needed to be repeated
+.) RecConAdapter adapter = new RecConAdapter(this, arrContact);
+	above code is used to pass the context to our adapter also arraylist to the adapter which needed to added via our adapter
+.) recContact.setAdapter(adapter);
+	above line is used to run our adapter
+	
+
