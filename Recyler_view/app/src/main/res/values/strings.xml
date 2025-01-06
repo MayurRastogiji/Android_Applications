@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Recyler_view</string>
+    <string name="update_con">Update Contact</string>
+    <string name="add_con">Add Contact</string>
+    <string name="update">Update</string>
+    <string name="add">Add</string>
+    <string name="Name">Enter your Name</string>
+    <string name="Number">Enter your Number</string>
 </resources>

@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/dialogBoxText"
             android:background="@color/white"
-            android:text="Add Contact"
+            android:text="@string/add_con"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="30dp"
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/DialogBoxName"
             android:layout_margin="20dp"
-            android:hint="Enter Your Name"
+            android:hint="@string/Name"
             android:background="@color/white"/>
         <EditText
             android:layout_width="250dp"
@@ -36,7 +36,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            android:hint="Enter Your Number"
+            android:hint="@string/Number"
             android:background="@color/white"/>
         <Button
             android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
             android:backgroundTint="@color/purple"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:text="Add"
+            android:text="@string/add"
             android:id="@+id/dialogButton"/>
 
     </LinearLayout>
