@@ -6,13 +6,12 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:gravity="center">
+    tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-<!--    including toolbar-->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -23,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_gravity="left">
+                android:gravity="left">
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -50,46 +49,28 @@
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/college_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ColName"
+        android:textSize="18sp"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_marginStart="16dp" />
+
+    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/auto_complete_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search..."
+        android:layout_below="@+id/college_name_text"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:gravity="center">
-
-        <!-- Spinner for Role Selection -->
-        <Spinner
-            android:id="@+id/spinnerRole"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/role_array"
-            />
-
-        <!-- Username Input -->
-        <EditText
-            android:id="@+id/editTextUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Username"
-            android:visibility="gone"/>
-
-        <!-- Password Input -->
-        <EditText
-            android:id="@+id/editTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:visibility="gone"/>
-
-        <!-- Login Button -->
-        <Button
-            android:id="@+id/buttonLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Login"/>
-
-    </LinearLayout>
-
+        android:layout_below="@+id/auto_complete_text_view" />
 
 </RelativeLayout>

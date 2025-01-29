@@ -5,4 +5,7 @@
         <item>Faculty</item>
         <item>Passenger</item>
     </string-array>
+    <string name="ComName">Company name</string>
+    <string name="ComTagLine">tag line</string>
+    <string name="ColName">College Name</string>
 </resources>

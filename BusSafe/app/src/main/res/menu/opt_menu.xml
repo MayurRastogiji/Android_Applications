@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/opt_1"
+        android:icon="@drawable/baseline_account_balance_24"
+        android:title="New Account"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/opt_2"
+        android:icon="@drawable/baseline_account_balance_wallet_24"
+        android:title="Account Balance"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/opt_3"
+        android:icon="@drawable/baseline_account_tree_24"
+        android:title="Account Structure"
+        app:showAsAction="collapseActionView"/>
+</menu>
