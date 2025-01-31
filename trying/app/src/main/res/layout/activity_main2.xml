@@ -50,8 +50,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="7sp"
-            android:text="scala"
+            android:text="scale"
             android:id="@+id/scale"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7sp"
+            android:text="zoom"
+            android:id="@+id/zoom"/>
 
         <Button
             android:layout_margin="7sp"

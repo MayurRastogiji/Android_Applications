@@ -1,14 +1,22 @@
 package com.example.bussafe;
 
+import static android.widget.Toast.*;
+
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -21,13 +29,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class DashBoardFaculty extends AppCompatActivity {
-
     AutoCompleteTextView findbus;
     Toolbar toolbar;
     ArrayList <String> buslist = new ArrayList<>();
     ArrayList <BusModel> busModelArrayList = new ArrayList<>();
+    ArrayList <BusModel> busModelFilteredArrayList = new ArrayList<>();
     RecyclerView recyclerView;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +53,8 @@ public class DashBoardFaculty extends AppCompatActivity {
 
         //        Linking toolbar to activity
         setSupportActionBar(toolbar);
+
+
 
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
@@ -73,13 +84,25 @@ public class DashBoardFaculty extends AppCompatActivity {
         busModelArrayList.add(new BusModel(buslist.get(8),"kartikey", "123456789", 45, 42));
         busModelArrayList.add(new BusModel(buslist.get(9),"chikki", "123456789", 46, 45));
 
-        RecyclerBusIdAdapter adapter = new RecyclerBusIdAdapter(this, busModelArrayList);
-        recyclerView.setAdapter(adapter);
+        RecyclerBusIdAdapter adapterTotal = new RecyclerBusIdAdapter(DashBoardFaculty.this, busModelArrayList);
+        recyclerView.setAdapter(adapterTotal);
 
-//        ArrayAdapter<String> adapter_search_bus = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, buslist);
-//        findbus.setAdapter(adapter_search_bus);
-//        findbus.setThreshold(1);
+        ArrayAdapter<String> adapter_search_bus = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, buslist);
+        findbus.setAdapter(adapter_search_bus);
+        findbus.setThreshold(1);
+
+        findbus.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                busModelFilteredArrayList.add(new BusModel(busModelArrayList.get(position).busId, busModelArrayList.get(position).facultyName, busModelArrayList.get(position).facultyNumber, busModelArrayList.get(position).totalStudent, busModelArrayList.get(position).presentStudent));
+                RecyclerBusIdAdapter adapterFiltered = new RecyclerBusIdAdapter(DashBoardFaculty.this, busModelFilteredArrayList);
+                recyclerView.setAdapter(adapterFiltered);
+            }
+        });
+
     }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         new MenuInflater(this).inflate(R.menu.opt_menu,menu);
@@ -90,11 +113,11 @@ public class DashBoardFaculty extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int itemID = item.getItemId();
         if (itemID == R.id.opt_1) {
-            Toast.makeText(this, "New Account", Toast.LENGTH_LONG).show();
+            makeText(this, "New Account", LENGTH_LONG).show();
         } else if (itemID == R.id.opt_2) {
-            Toast.makeText(this, "Account Balance", Toast.LENGTH_LONG).show();
+            makeText(this, "Account Balance", LENGTH_LONG).show();
         } else if (itemID == R.id.opt_3) {
-            Toast.makeText(this, "Account Structure", Toast.LENGTH_LONG).show();
+            makeText(this, "Account Structure", LENGTH_LONG).show();
         }
 //        this command is used to execute back command
 //        if (itemID == android.R.id.home) {

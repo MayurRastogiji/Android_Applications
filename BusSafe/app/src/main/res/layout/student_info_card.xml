@@ -5,40 +5,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center">
 
-
     <androidx.cardview.widget.CardView
-        android:id="@+id/BusCard"
-        android:layout_width="180dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/yellow"
         app:cardCornerRadius="7dp"
-        app:cardUseCompatPadding="true">
+        app:cardUseCompatPadding="true"
+        android:backgroundTint="@color/yellow">
 
         <LinearLayout
-            android:layout_width="152dp"
+            android:layout_width="161dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="11dp"
             android:layout_marginLeft="11dp"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/BusCardId"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="route_1-bus_1"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_account_circle_24"
+                android:layout_gravity="center_horizontal"
+                android:padding="5px"/>
 
             <TextView
-                android:id="@+id/FacultyName"
+                android:id="@+id/StudentName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Faculty name"
+                android:text="Student name"
                 android:textColor="@color/offwhite"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:gravity="center_horizontal"/>
 
             <TextView
-                android:id="@+id/FacultyNumber"
+                android:id="@+id/StudentNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Contact number"
@@ -52,32 +50,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Total Student = " />
+                    android:text="Course = " />
 
                 <TextView
-                    android:id="@+id/TotalStudent"
+                    android:id="@+id/Course"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="45"
-                    android:textColor="@color/white" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Present Student = " />
-
-                <TextView
-                    android:id="@+id/PresentStudent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="45"
+                    android:text="Btech"
                     android:textColor="@color/white" />
             </LinearLayout>
 
@@ -89,25 +68,34 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Absent Student = " />
+                    android:text="Total Shifts = " />
 
                 <TextView
-                    android:id="@+id/AbsentStudent"
+                    android:id="@+id/totalShift"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="45"
                     android:textColor="@color/white" />
             </LinearLayout>
 
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:id="@+id/view"
-                android:text="view"
-                android:layout_gravity="center_horizontal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Present Shifts = " />
+
+                <TextView
+                    android:id="@+id/PresentShifts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45"
+                    android:textColor="@color/white" />
+            </LinearLayout>
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
-
 
 </LinearLayout>

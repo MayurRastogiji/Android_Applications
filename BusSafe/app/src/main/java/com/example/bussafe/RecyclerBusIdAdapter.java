@@ -3,9 +3,11 @@ package com.example.bussafe;
 import static android.view.LayoutInflater.from;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -36,6 +38,10 @@ public class RecyclerBusIdAdapter extends RecyclerView.Adapter<RecyclerBusIdAdap
         holder.totalStudent.setText(String.valueOf(busModelArrayList.get(position).totalStudent));
         holder.presentStudent.setText(String.valueOf(busModelArrayList.get(position).presentStudent));
         holder.absentStudent.setText(String.valueOf(busModelArrayList.get(position).absentStudent));
+        holder.button.setOnClickListener(v -> {
+            Intent intent = new Intent(context, DashBoardBus.class);
+            context.startActivity(intent);
+        });
 
     }
 
@@ -44,8 +50,9 @@ public class RecyclerBusIdAdapter extends RecyclerView.Adapter<RecyclerBusIdAdap
         return busModelArrayList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView busId, facultyName, facultyNumber, totalStudent, presentStudent, absentStudent;
+        Button button;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             busId = itemView.findViewById(R.id.BusCardId);
@@ -54,6 +61,7 @@ public class RecyclerBusIdAdapter extends RecyclerView.Adapter<RecyclerBusIdAdap
             totalStudent = itemView.findViewById(R.id.TotalStudent);
             presentStudent = itemView.findViewById(R.id.PresentStudent);
             absentStudent = itemView.findViewById(R.id.AbsentStudent);
+            button = itemView.findViewById(R.id.view);
         }
     }
 }
