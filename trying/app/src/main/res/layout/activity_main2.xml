@@ -67,6 +67,20 @@
             android:text="lottie"
             android:id="@+id/lottie"/>
 
+        <Button
+            android:id="@+id/flip_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7sp"
+            android:text="flip_in" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7sp"
+            android:text="flip_out"
+            android:id="@+id/flip_out"/>
+
     </GridLayout>
 
 </RelativeLayout>

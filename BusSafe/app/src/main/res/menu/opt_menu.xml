@@ -11,6 +11,6 @@
         app:showAsAction="ifRoom"/>
     <item android:id="@+id/opt_3"
         android:icon="@drawable/baseline_account_tree_24"
-        android:title="Account Structure"
+        android:title="Log Out"
         app:showAsAction="collapseActionView"/>
 </menu>

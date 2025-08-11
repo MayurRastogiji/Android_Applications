@@ -190,3 +190,26 @@ holder.conImg.setImageResource(arrContact.get(position).conImg);
 	above line is used to run our adapter
 	
 
+** Fragmentation **
+
+
+it is the process to create interactive UI
+it is child of activity, you cannot initialise it without activity
+
+METHODS OF FRAGMENT CLASS
+
+.) onAttach(Activity) - it is called only once when it is attached with activity
+.) onCreaye(Bundle) - it is used to initialise the fragment
+.) oncreateView(LayoutInflater, ViewGroup, Bundle) - creates abd returns view hierarchy
+.) onActivityCreated(Bundle) - it is invoked after the completion of onCreate() method.
+.) onViewStateRestored(Bundle) - it provides information to the fragment that all the saved state of fragment view hierarchy has been restored
+.) onStart() - makes the fragment visible
+.) onResume() - makes the fragment interactive
+.) onPause() - is called when fragment is no longer interactive
+.) onStop() - is called when fragment is no longer visible
+.) onDestroyView() - allows the fragment to clean up resources.
+.) onDestroy() - allows the fragment to do final clean up of fragment state
+.) onDetach() - It is called immediately prior to the fragment no longer being associated with its activity.
+
+
+

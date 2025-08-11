@@ -4,6 +4,7 @@ import static android.widget.Toast.*;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -42,7 +43,7 @@ public class DashBoardFaculty extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_dash_board_faculty);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main_dash_board_faculty), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
@@ -117,7 +118,13 @@ public class DashBoardFaculty extends AppCompatActivity {
         } else if (itemID == R.id.opt_2) {
             makeText(this, "Account Balance", LENGTH_LONG).show();
         } else if (itemID == R.id.opt_3) {
-            makeText(this, "Account Structure", LENGTH_LONG).show();
+            SharedPreferences pref = getSharedPreferences("login", MODE_PRIVATE);
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putBoolean("flag", false);
+            editor.putString("role", "null");
+            editor.apply();
+            Intent l2s = new Intent(DashBoardFaculty.this, login.class);
+            startActivity(l2s);
         }
 //        this command is used to execute back command
 //        if (itemID == android.R.id.home) {

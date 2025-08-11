@@ -13,6 +13,8 @@ import androidx.activity.EdgeToEdge;
 
 public class MainActivity2 extends MainActivity {
 
+    private static int scorePlayer1 = 0;
+    private static int scorePlayer2 = 0;
     Button bt11, bt12, bt13, bt21, bt22, bt23, bt31, bt32, bt33;
     TextView player1, player2, result, turn;
     int count = 0;
@@ -61,9 +63,11 @@ public class MainActivity2 extends MainActivity {
         String output = "";
         if (str.equals(symbol_1)) {
             output = String.format("%s wins", name_1);
+            scorePlayer1++;
             System.out.println(output);
         } else if (str.equals(symbol_2)) {
             output = String.format("%s wins", name_2);
+            scorePlayer2++;
         }
         return output;
     }

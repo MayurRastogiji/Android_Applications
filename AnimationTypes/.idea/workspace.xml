@@ -26,7 +26,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="baeced60-eb6c-49ce-9b35-2775a1bdab1b" name="Changes" comment="" />
+    <list default="true" id="baeced60-eb6c-49ce-9b35-2775a1bdab1b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../BusSafe/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BusSafe/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BusSafe/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../BusSafe/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BusSafe/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BusSafe/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BusSafe/app/src/main/java/com/example/bussafe/SplashScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BusSafe/app/src/main/java/com/example/bussafe/SplashScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BusSafe/app/src/main/java/com/example/bussafe/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BusSafe/app/src/main/java/com/example/bussafe/login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BusSafe/app/src/main/res/layout/activity_dash_board_bus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BusSafe/app/src/main/res/layout/activity_dash_board_bus.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BusSafe/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BusSafe/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BusSafe/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../BusSafe/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BusSafe/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../BusSafe/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learn.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../learn.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,7 +106,8 @@
   </component>
   <component name="RunManager" selected="Android App.MainActivity">
     <configuration name="MainActivity" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false" temporary="true">
-      <module name="AnimationTypes.app.main" />
+      <module name="AnimationTypes.app" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -103,6 +115,7 @@
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="ALL_USERS" value="false" />
       <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
       <option name="CLEAR_APP_STORAGE" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
@@ -155,6 +168,7 @@
         <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
       <option name="ACTIVITY_CLASS" value="com.example.animationtypes.MainActivity" />
       <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
@@ -163,7 +177,8 @@
       </method>
     </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="AnimationTypes.app.main" />
+      <module name="AnimationTypes.app" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -171,6 +186,7 @@
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="ALL_USERS" value="false" />
       <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
       <option name="CLEAR_APP_STORAGE" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
@@ -223,6 +239,7 @@
         <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />

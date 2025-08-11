@@ -1,6 +1,7 @@
 package com.example.bussafe;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -89,13 +90,25 @@ public class login extends AppCompatActivity {
                 String username = editTextUsername.getText().toString();
                 String password = editTextPassword.getText().toString();
 
+                SharedPreferences pref = getSharedPreferences("login", MODE_PRIVATE);
+                SharedPreferences.Editor editor = pref.edit();
+
+
                 if (role.equals("Faculty")) {
                     Toast.makeText(login.this, "Faculty Login Successful", Toast.LENGTH_SHORT).show();
                     l2m = new Intent(login.this, DashBoardFaculty.class);
-                } else {// Handle Passenger login (if needed)
+                    editor.putBoolean("flag", true);
+                    editor.putString("role", role);
+                } else if (role.equals("Passenger")){// Handle Passenger login (if needed)
                     Toast.makeText(login.this, "Passenger Login", Toast.LENGTH_SHORT).show();
                     l2m = new Intent(login.this, MainActivity.class);
+                    editor.putBoolean("flag", true);
+                    editor.putString("role", role);
+                } else {
+                    Toast.makeText(login.this, "Select correct role", Toast.LENGTH_SHORT).show();
+                    l2m = new Intent(login.this, login.class);
                 }
+                editor.apply();
                 startActivity(l2m);
             }
         });

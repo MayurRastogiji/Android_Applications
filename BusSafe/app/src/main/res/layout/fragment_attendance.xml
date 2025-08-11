@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corners"
+    android:paddingBottom="10dp"
+    >
+    <TextView
+        android:id="@+id/attendance_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Attendance"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/refresh_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/baseline_autorenew_24"  android:background="?attr/selectableItemBackgroundBorderless"  tools:ignore="SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:id="@+id/attendance_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/attendance_heading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="11mm"
+                android:layout_height="wrap_content"
+                android:text="Morning:"
+                android:textSize="16sp" />
+
+            <com.example.bussafe.AttendanceBar
+                android:id="@+id/morning_bar"
+                android:layout_width="40mm"
+                android:layout_height="10dp"
+                android:layout_marginStart="8dp" />
+
+            <TextView
+                android:id="@+id/morning_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="80%"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="11mm"
+                android:layout_height="wrap_content"
+                android:text="Evening:"
+                android:textSize="16sp" />
+
+            <com.example.bussafe.AttendanceBar
+                android:id="@+id/evening_bar"
+                android:layout_width="40mm"
+                android:layout_height="10dp"
+                android:layout_marginStart="8dp" />
+
+            <TextView
+                android:id="@+id/evening_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="90%"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="11mm"
+                android:layout_height="wrap_content"
+                android:text="Total:"
+                android:textSize="16sp" />
+
+            <com.example.bussafe.AttendanceBar
+                android:id="@+id/total_bar"
+                android:layout_width="40mm"
+                android:layout_height="10dp"
+                android:layout_marginStart="8dp" />
+
+            <TextView
+                android:id="@+id/total_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="85%"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>
